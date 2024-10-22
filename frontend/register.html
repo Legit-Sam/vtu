@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SamWeb VTU - Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="register-container">
+        <div class="login-image">
+            <img src="/images/hero.6642f0c38cb357320a4a.png" alt="Smiling woman">
+            <div class="slogan">
+                <h2>Welcome to SamWeb VTU</h2>
+                <p>Your one-stop solution for all your VTU needs</p>
+            </div>
+        </div>
+        <div class="register-form">
+            <div class="form-header">
+                <img src="/images/hw logo-96286-10292.png" alt="SamWeb VTU Logo" class="logo">
+                <h1>Sign up</h1>
+                <p>Please provide the following details to create your account</p>
+            </div>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone-number">Phone Number</label>
+                    <input type="tel" id="phone-number" name="phone-number" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                </div>
+                <div class="form-group">
+                    <label for="profile-image">Profile Image</label>
+                    <input type="file" id="profile-image" name="profile-image" accept="image/*">
+                </div>
+                <button type="submit" class="register-btn">Sign Up</button>
+            </form>
+            <p class="login-link">Already have an account? <a href="login.html">Log in</a></p>
+        </div>
+    </div>
+    <div class="floating-buttons">
+        <button class="whatsapp-btn"><i class="fab fa-whatsapp"></i></button>
+        <button class="instagram-btn"><i class="fab fa-instagram"></i></button>
+    </div>
+    
+    <script src="../backend/register.js"></script>
+</body>
+</html>

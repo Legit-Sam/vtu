@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SamWeb VTU - Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="/images/hw logo-96286-10292.png" alt="SamWeb VTU Logo">
+            <span>SamWeb VTU</span>
+        </div>
+        <div class="menu-item active">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+        </div>
+        <div class="menu-item">
+            <i class="fas fa-exchange-alt"></i>
+            <span>Transactions</span>
+        </div>
+        <div class="menu-item">
+            <i class="fas fa-box"></i>
+            <span>Products</span>
+        </div>
+        <div class="menu-item">
+            <i class="fas fa-wallet"></i>
+            <span>Wallet</span>
+        </div>
+        <div class="menu-item">
+            <i class="fas fa-file-alt"></i>
+            <span>Api Documentation</span>
+        </div>
+        <div class="menu-item">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+        </div>
+        <div class="menu-item">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <div class="header">
+            <h1>Dashboard Analysis</h1>
+            <div class="user-info">
+                <img src="/images/user-avatar.png" alt="User Avatar">
+                <span>John Doe</span>
+            </div>
+        </div>
+        
+        <div class="notification">
+            <span>NEW</span> A new CBN policy regarding all virtual accounts to be linked to BVN
+        </div>
+        
+        <div class="dashboard-summary">
+            <div class="summary-card">
+                <h3>Wallet Balance</h3>
+                <p>₦0</p>
+            </div>
+            <div class="summary-card">
+                <h3>Today's Transactions</h3>
+                <p>0</p>
+            </div>
+            <div class="summary-card">
+                <h3>Total Products</h3>
+                <p>0</p>
+            </div>
+            <div class="summary-card">
+                <h3>Total Profit</h3>
+                <p>₦0</p>
+            </div>
+        </div>
+        
+        <div class="quick-services">
+            <h2>Quick Services</h2>
+            <div class="service-icons">
+                <div class="service-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Airtime</span>
+                </div>
+                <div class="service-icon">
+                    <i class="fas fa-wifi"></i>
+                    <span>Data</span>
+                </div>
+                <div class="service-icon">
+                    <i class="fas fa-tv"></i>
+                    <span>Cable TV</span>
+                </div>
+                <div class="service-icon">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Electricity</span>
+                </div>
+                <div class="service-icon">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Fund Wallet</span>
+                </div>
+                <div class="service-icon">
+                    <i class="fas fa-university"></i>
+                    <span>Betting</span>
+                </div>
+                <div class="service-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Education</span>
+                </div>
+                <div class="service-icon">
+                    <i class="fas fa-ellipsis-h"></i>
+                    <span>More</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="recent-transactions">
+            <h2>Recent Transactions</h2>
+            <table class="transaction-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Amount</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Transaction rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="chat-button">
+        <i class="fas fa-comments"></i>
+    </div>
+    <!-- <script src="app.js"></script> -->
+</body>
+</html>

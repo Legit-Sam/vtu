@@ -1,0 +1,269 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px;
+    animation: slideInFromRight 1s ease-in-out 0.5s both;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    60% {
+        transform: translateX(-10%);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.login-image {
+    flex: 1;
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 200px;
+}
+
+.login-image img {
+    width: 100%;
+    min-height: 80%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slogan {
+    position: relative;
+    color: #fff;
+    opacity: 1;
+    animation: fadeIn 0.8s ease-in-out 1.5s forwards;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.slogan h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.slogan p {
+    font-size: 1rem;
+}
+
+.register-form {
+    flex: 1;
+    padding: 20px;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out 1.2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.logo {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.form-group:nth-child(1) { animation-delay: 1.4s; }
+.form-group:nth-child(2) { animation-delay: 1.6s; }
+.form-group:nth-child(3) { animation-delay: 1.8s; }
+.form-group:nth-child(4) { animation-delay: 2.0s; }
+.form-group:nth-child(5) { animation-delay: 2.2s; }
+.form-group:nth-child(6) { animation-delay: 2.4s; }
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out 2.6s forwards;
+}
+
+.register-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.register-btn:active {
+    transform: translateY(1px);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out 2.8s forwards;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-link a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.whatsapp-btn,
+.instagram-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+}
+
+.instagram-btn {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+
+.whatsapp-btn:hover,
+.instagram-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width: 768px) {
+    .register-container {
+        flex-direction: row;
+    }
+
+    .login-image {
+        flex: 1.5;
+        min-height: auto;
+    }
+
+    .login-image img {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .register-form {
+        flex: 1;
+        padding: 40px;
+    }
+
+    .slogan {
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+    }
+
+    .slogan h2 {
+        font-size: 2rem;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .whatsapp-btn,
+    .instagram-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}

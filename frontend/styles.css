@@ -1,0 +1,966 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-right: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+.cta-buttons button {
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.download-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+}
+
+.login-btn {
+    background-color: transparent;
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+
+.login-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.login-btn a:hover {
+    color: #fff;
+}
+
+.mobile-menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu-icon.active {
+    transform: rotate(90deg);
+}
+
+/* Hero section styles */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 8rem 2rem 4rem;
+    margin-top: 60px;
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 1;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.hero-content.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #007bff;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+}
+
+.app-buttons.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.app-buttons a img {
+    height: 40px;
+}
+
+.user-count {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease 0.4s, transform 0.8s ease 0.4s;
+}
+
+.user-count.animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.user-count p {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    color: #333;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-avatars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.user-avatars img {
+    width: 70%;
+    height: auto;
+    border-radius: 0;
+    border: none;
+}
+
+.hero-image {
+    flex: 1;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease 0.6s, transform 0.8s ease 0.6s;
+}
+
+.hero-image.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Download counter styles */
+.download-counter {
+    background: linear-gradient(to right, #e0e8ff, #ffffff);
+    padding: 2rem 0;
+    overflow: hidden;
+}
+
+.counter-container {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.counter-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    margin-right: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: scroll 20s linear infinite;
+}
+
+.counter-container {
+    display: flex;
+    overflow: hidden;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.counter-item img {
+    width: 30px;
+    height: 30px;
+    margin-right: 1rem;
+}
+
+.counter-item p {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Features scroll styles */
+.features-scroll {
+    padding: 3rem 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.features-container {
+    display: flex;
+    width: 100%;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.feature-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.feature-item p {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* Our Services styles */
+.our-services {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.our-services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.our-services > p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.service-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.service-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--item-index) * 0.1s);
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.service-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.service-item p {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+@media (max-width: 768px) {
+    .our-services {
+        padding: 3rem 1rem;
+    }
+
+    .our-services h2 {
+        font-size: 2rem;
+    }
+
+    .our-services > p {
+        font-size: 1rem;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Easy Steps Section Styles */
+.easy-steps {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.easy-steps h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.easy-steps .highlight {
+    color: #007bff;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.step-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.step-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.step-image img:hover {
+    transform: scale(1.05);
+}
+
+.steps-list {
+    flex: 1;
+    max-width: 50%;
+    padding-left: 2rem;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.step-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.step-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-right: 1rem;
+    line-height: 1;
+}
+
+.step-content {
+    text-align: left;
+}
+
+.step-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.step-content p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.cta-button {
+    margin-top: 2rem;
+}
+
+.cta-button .download-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button .download-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.easy-steps h2,
+.step-image img,
+.cta-button .download-btn {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.step-item:nth-child(1) { animation: fadeInUp 0.8s ease-out 0.2s forwards; }
+.step-item:nth-child(2) { animation: fadeInUp 0.8s ease-out 0.4s forwards; }
+.step-item:nth-child(3) { animation: fadeInUp 0.8s ease-out 0.6s forwards; }
+
+.cta-button .download-btn {
+    animation: pulse 2s infinite;
+}
+
+.cta-button .download-btn:hover {
+    animation: none;
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.mobile-menu-icon.active i {
+    animation: rotate 0.5s ease forwards;
+}
+
+@keyframes floatAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.hero-image.animate img {
+    animation: floatAnimation 3s ease-in-out infinite;
+}
+
+/* FAQ Section Styles */
+.faq {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.faq h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.faq-question h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #333;
+}
+
+.toggle-icon {
+    font-size: 1.5rem;
+    color: #007bff;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    padding: 0 1rem 1rem;
+    color: #6c757d;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* App Download Section Styles */
+.app-download {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.app-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.app-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.app-buttons a img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.app-buttons a:hover img {
+    transform: scale(1.05);
+}
+
+.app-image {
+    flex: 1;
+    text-align: right;
+}
+
+.app-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 4rem 2rem 2rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.footer-logo img {
+    height: 40px;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style-type: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links li a {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links li a:hover {
+    color: #007bff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #555;
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .social-links {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-column {
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+
+/* Responsive styles for download counter and features */
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Header and Navigation */
+    header {
+        padding: 0.5rem 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    nav ul.show {
+        display: flex;
+        animation: slideDown 0.5s ease forwards;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .cta-buttons {
+        display: none;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .cta-buttons.show {
+        display: flex;
+        flex-direction: column;
+        animation: fadeIn 0.5s ease forwards;
+    }
+
+    .cta-buttons button {
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 6rem;
+    }
+
+    .hero-content, .hero-image {
+        flex: none;
+    }
+
+    .app-buttons {
+        justify-content: center;
+    }
+
+    .user-count {
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Download Counter */
+    .counter-item {
+        padding: 0.5rem 1rem;
+        margin-right: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .counter-item img {
+        width: 25px;
+        height: 25px;
+        margin-right: 0.8rem;
+    }
+
+    .counter-item p {
+        font-size: 0.9rem;
+    }
+
+    /* Features */
+    .feature-item {
+        padding: 1.5rem;
+        margin-right: 1.5rem;
+        min-width: 150px;
+        flex-direction: column;
+    }
+
+    .features-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .feature-item img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .feature-item p {
+        font-size: 0.9rem;
+    }
+
+    /* Easy Steps Section */
+    .steps-container {
+        flex-direction: column;
+    }
+
+    .step-image {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .steps-list {
+        width: 100%;
+    }
+
+    .step-item {
+        margin-bottom: 1.5rem;
+    }
+
+    .step-number {
+        font-size: 1.5rem;
+    }
+
+    .step-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .step-content p {
+        font-size: 0.9rem;
+    }
+    .app-download {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .app-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .app-buttons {
+        justify-content: center;
+    }
+
+    .app-image {
+        text-align: center;
+    }
+}
+
+
